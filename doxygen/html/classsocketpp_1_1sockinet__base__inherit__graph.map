@@ -1,8 +1,0 @@
-<map id="socketpp::sockinet_base" name="socketpp::sockinet_base">
-<area shape="rect" id="node7" href="$classsocketpp_1_1iosockinet.html" title="socketpp::iosockinet" alt="" coords="5,304,147,331"/>
-<area shape="rect" id="node8" href="$classsocketpp_1_1isockinet.html" title="socketpp::isockinet" alt="" coords="171,304,305,331"/>
-<area shape="rect" id="node9" href="$classsocketpp_1_1osockinet.html" title="socketpp::osockinet" alt="" coords="331,304,469,331"/>
-<area shape="rect" id="node2" href="$classsocketpp_1_1sockstream__base.html" title="socketpp::sockstream_base" alt="" coords="49,155,236,181"/>
-<area shape="rect" id="node4" href="$classsocketpp_1_1sockinetbuf.html" title="socketpp::sockinetbuf" alt="" coords="260,155,408,181"/>
-<area shape="rect" id="node5" href="$classsocketpp_1_1sockbuf.html" title="socketpp::sockbuf" alt="" coords="271,80,399,107"/>
-</map>

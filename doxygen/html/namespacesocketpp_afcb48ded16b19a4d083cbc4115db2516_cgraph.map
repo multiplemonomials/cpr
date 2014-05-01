@@ -1,7 +1,0 @@
-<map id="socketpp::crlf" name="socketpp::crlf">
-<area shape="rect" id="node2" href="$classsocketpp_1_1sockstream__base.html#a676489a0658777f03e81b7947b4dea87" title="socketpp::sockstream\l_base::rdbuf" alt="" coords="155,5,306,46"/>
-<area shape="rect" id="node3" href="$classsocketpp_1_1sockbuf.html#a13ab0a926330d008ffaabbe5752ce1a4" title="socketpp::sockbuf::\lpubsync" alt="" coords="163,70,299,111"/>
-<area shape="rect" id="node4" href="$classsocketpp_1_1sockbuf.html#a9b67ca231ee3235fa1f46a807cd74b19" title="socketpp::sockbuf::sync" alt="" coords="355,77,519,104"/>
-<area shape="rect" id="node5" href="$classsocketpp_1_1sockbuf.html#a0298714f5ca2c741b76469e9d233a31b" title="socketpp::sockbuf::\lwrite" alt="" coords="568,70,704,111"/>
-<area shape="rect" id="node6" href="$classsocketpp_1_1sockbuf.html#a610f1725dd0fadc48b19b6cd89ea79b7" title="socketpp::sockbuf::\lis_writeready" alt="" coords="752,70,888,111"/>
-</map>

@@ -1,9 +1,0 @@
-<map id="cpr::cpr_error_category_t::equivalent" name="cpr::cpr_error_category_t::equivalent">
-<area shape="rect" id="node2" href="$classcpr_1_1cpr__error__category__t.html#a61a3640dfbbba7cc182aad57d23879bb" title="cpr::cpr_error_category\l_t::default_error_condition" alt="" coords="211,125,381,166"/>
-<area shape="rect" id="node3" href="$namespacecpr.html#a62fff77f58240786e0118e66a2ee7681" title="cpr::sockerr_benign" alt="" coords="429,5,565,32"/>
-<area shape="rect" id="node4" href="$namespacecpr.html#abf39b46670295f62528442a686b5d975" title="cpr::sockerr_addr" alt="" coords="436,56,559,83"/>
-<area shape="rect" id="node5" href="$namespacecpr.html#a600a905b3f46e4ccb84e13d4e81ffd48" title="cpr::sockerr_conn" alt="" coords="434,107,561,133"/>
-<area shape="rect" id="node6" href="$namespacecpr.html#a4edc53eab090888f42f4c6e48099979f" title="cpr::sockerr_op" alt="" coords="441,157,553,184"/>
-<area shape="rect" id="node7" href="$namespacecpr.html#a7ae62011215c5b583f24c84a4cb995d3" title="cpr::sockerr_arg" alt="" coords="439,208,555,235"/>
-<area shape="rect" id="node8" href="$namespacecpr.html#a66bcc6e38de3c6853d88b3a57c5c8b8b" title="cpr::sockerr_io" alt="" coords="443,259,551,285"/>
-</map>

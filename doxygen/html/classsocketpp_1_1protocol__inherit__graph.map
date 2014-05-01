@@ -1,7 +1,0 @@
-<map id="socketpp::protocol" name="socketpp::protocol">
-<area shape="rect" id="node6" href="$classsocketpp_1_1echo.html" title="socketpp::echo" alt="" coords="5,304,115,331"/>
-<area shape="rect" id="node7" href="$classsocketpp_1_1ftp.html" title="socketpp::ftp" alt="" coords="139,304,236,331"/>
-<area shape="rect" id="node8" href="$classsocketpp_1_1smtp.html" title="socketpp::smtp" alt="" coords="261,304,372,331"/>
-<area shape="rect" id="node2" href="$classsocketpp_1_1iosockstream.html" title="socketpp::iosockstream" alt="" coords="107,155,268,181"/>
-<area shape="rect" id="node4" href="$classsocketpp_1_1sockstream__base.html" title="socketpp::sockstream_base" alt="" coords="179,80,365,107"/>
-</map>

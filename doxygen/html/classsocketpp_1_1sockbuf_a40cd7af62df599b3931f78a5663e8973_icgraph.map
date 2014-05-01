@@ -1,9 +1,0 @@
-<map id="socketpp::sockbuf::atmark" name="socketpp::sockbuf::atmark">
-<area shape="rect" id="node2" href="$classsocketpp_1_1sockbuf.html#a241bf8dddceda64a8ab3a959aa0dbe8c" title="socketpp::sockbuf::read" alt="" coords="190,44,351,71"/>
-<area shape="rect" id="node7" href="$classsocketpp_1_1sockbuf.html#a092fb8cdf616929e90dc103baba4e83e" title="socketpp::sockbuf::recv" alt="" coords="191,95,350,121"/>
-<area shape="rect" id="node8" href="$classsocketpp_1_1sockbuf.html#a42ee48302c0f55832c486f622911a4c0" title="socketpp::sockbuf::\lrecvfrom" alt="" coords="203,146,339,187"/>
-<area shape="rect" id="node3" href="$classsocketpp_1_1echo_1_1echobuf.html#a0eb23a456cc2fad7bb594de3442c84cb" title="socketpp::echo::echobuf\l::serve_clients" alt="" coords="401,5,565,46"/>
-<area shape="rect" id="node4" href="$classsocketpp_1_1sockbuf.html#af2f07774d898241ad2db5868a31899b6" title="socketpp::sockbuf::\lunderflow" alt="" coords="415,70,551,111"/>
-<area shape="rect" id="node5" href="$classsocketpp_1_1sockbuf.html#a452f6fe12c8059bfa659b574e579e505" title="socketpp::sockbuf::\luflow" alt="" coords="613,37,749,78"/>
-<area shape="rect" id="node6" href="$classsocketpp_1_1sockbuf.html#ac980ab14448119a590d8298c70dfd433" title="socketpp::sockbuf::\lxsgetn" alt="" coords="613,102,749,143"/>
-</map>

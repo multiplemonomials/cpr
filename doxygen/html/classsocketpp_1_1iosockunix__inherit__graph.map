@@ -1,7 +1,0 @@
-<map id="socketpp::iosockunix" name="socketpp::iosockunix">
-<area shape="rect" id="node2" href="$classsocketpp_1_1sockunix__base.html" title="socketpp::sockunix_base" alt="" coords="243,229,413,256"/>
-<area shape="rect" id="node3" href="$classsocketpp_1_1sockstream__base.html" title="socketpp::sockstream_base" alt="" coords="128,155,315,181"/>
-<area shape="rect" id="node8" href="$classsocketpp_1_1iosockstream.html" title="socketpp::iosockstream" alt="" coords="57,229,217,256"/>
-<area shape="rect" id="node5" href="$classsocketpp_1_1sockunixbuf.html" title="socketpp::sockunixbuf" alt="" coords="339,155,491,181"/>
-<area shape="rect" id="node6" href="$classsocketpp_1_1sockbuf.html" title="socketpp::sockbuf" alt="" coords="351,80,479,107"/>
-</map>

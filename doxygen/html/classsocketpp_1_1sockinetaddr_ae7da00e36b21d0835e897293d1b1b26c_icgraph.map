@@ -1,8 +1,0 @@
-<map id="socketpp::sockinetaddr::addr" name="socketpp::sockinetaddr::addr">
-<area shape="rect" id="node2" href="$classsocketpp_1_1sockinetbuf.html#af527eb451bed6254f89ea8efc20a2332" title="socketpp::sockinetbuf\l::localaddr" alt="" coords="211,70,360,111"/>
-<area shape="rect" id="node5" href="$classsocketpp_1_1sockinetbuf.html#a65c55b812f19b120ed517c5edb9a1200" title="socketpp::sockinetbuf\l::peeraddr" alt="" coords="211,135,360,177"/>
-<area shape="rect" id="node3" href="$classsocketpp_1_1sockinetbuf.html#a902b3c27198ab45cf8d58d18ae5438cf" title="socketpp::sockinetbuf\l::localport" alt="" coords="408,5,557,46"/>
-<area shape="rect" id="node4" href="$classsocketpp_1_1sockinetbuf.html#a6b758b03262cf53d86093bbc703f424d" title="socketpp::sockinetbuf\l::localhost" alt="" coords="408,70,557,111"/>
-<area shape="rect" id="node6" href="$classsocketpp_1_1sockinetbuf.html#a5a37c4b3cb54d3c9f106aeb7f404885e" title="socketpp::sockinetbuf\l::peerport" alt="" coords="408,135,557,177"/>
-<area shape="rect" id="node7" href="$classsocketpp_1_1sockinetbuf.html#a94ee6647214ee859aea89362a268e012" title="socketpp::sockinetbuf\l::peerhost" alt="" coords="408,201,557,242"/>
-</map>

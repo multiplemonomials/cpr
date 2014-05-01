@@ -1,8 +1,0 @@
-<map id="socketpp::sockinetbuf::localport" name="socketpp::sockinetbuf::localport">
-<area shape="rect" id="node2" href="$classsocketpp_1_1sockinetbuf.html#af527eb451bed6254f89ea8efc20a2332" title="socketpp::sockinetbuf\l::localaddr" alt="" coords="207,37,356,78"/>
-<area shape="rect" id="node6" href="$classsocketpp_1_1sockinetaddr.html#a2d5792d022ba59d3070d394b3b754fd8" title="socketpp::sockinetaddr\l::family" alt="" coords="203,102,360,143"/>
-<area shape="rect" id="node7" href="$classsocketpp_1_1sockinetaddr.html#a4658b8792ab8ec38da2606b76b4d89c4" title="socketpp::sockinetaddr\l::getport" alt="" coords="203,167,360,209"/>
-<area shape="rect" id="node3" href="$classsocketpp_1_1sockinetaddr.html#a6f651026d3fc8e74ac31273c0d159cc0" title="socketpp::sockinetaddr\l::size" alt="" coords="408,5,565,46"/>
-<area shape="rect" id="node4" href="$classsocketpp_1_1sockinetaddr.html#ae7da00e36b21d0835e897293d1b1b26c" title="socketpp::sockinetaddr\l::addr" alt="" coords="408,70,565,111"/>
-<area shape="rect" id="node5" href="$classsocketpp_1_1sockinetaddr.html#aae75e978b54722ed1a23e5d688655343" title="socketpp::sockinetaddr\l::addr_in" alt="" coords="613,70,771,111"/>
-</map>

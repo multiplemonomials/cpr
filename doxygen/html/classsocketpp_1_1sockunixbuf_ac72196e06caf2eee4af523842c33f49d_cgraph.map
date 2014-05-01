@@ -1,6 +1,0 @@
-<map id="socketpp::sockunixbuf::bind" name="socketpp::sockunixbuf::bind">
-<area shape="rect" id="node2" href="$classsocketpp_1_1sockunixbuf.html#a95c82c37d3c55e2f9a991433ec8536fc" title="socketpp::sockunixbuf\l::bind" alt="" coords="205,38,357,79"/>
-<area shape="rect" id="node3" href="$classsocketpp_1_1sockbuf.html#a37d003adbdd28805ad9e7c48b0a66ea0" title="socketpp::sockbuf::bind" alt="" coords="405,45,565,72"/>
-<area shape="rect" id="node4" href="$classsocketpp_1_1sock_addr.html#ad4ab244fb7ec9f9fac4738665c12bbd6" title="socketpp::sockAddr\l::addr" alt="" coords="613,5,752,46"/>
-<area shape="rect" id="node5" href="$classsocketpp_1_1sock_addr.html#a321b6f12f1dfb05d9b6d6cb2df753f3e" title="socketpp::sockAddr\l::size" alt="" coords="613,70,752,111"/>
-</map>
