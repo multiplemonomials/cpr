@@ -1,0 +1,11 @@
+<map id="socketpp::sockbuf::is_writeready" name="socketpp::sockbuf::is_writeready">
+<area shape="rect" id="node2" href="$classsocketpp_1_1sockbuf.html#a0298714f5ca2c741b76469e9d233a31b" title="socketpp::sockbuf::\lwrite" alt="" coords="204,42,340,83"/>
+<area shape="rect" id="node9" href="$classsocketpp_1_1sockbuf.html#a353af31cfc89cf72c43c2be6f03ff796" title="socketpp::sockbuf::send" alt="" coords="190,108,354,135"/>
+<area shape="rect" id="node10" href="$classsocketpp_1_1sockbuf.html#a4e77a30cf0a0d7910d691d730c86c1c9" title="socketpp::sockbuf::\lsendto" alt="" coords="204,159,340,201"/>
+<area shape="rect" id="node3" href="$classsocketpp_1_1echo_1_1echobuf.html#a0eb23a456cc2fad7bb594de3442c84cb" title="socketpp::echo::echobuf\l::serve_clients" alt="" coords="403,13,567,54"/>
+<area shape="rect" id="node4" href="$classsocketpp_1_1sockbuf.html#a9b67ca231ee3235fa1f46a807cd74b19" title="socketpp::sockbuf::sync" alt="" coords="403,79,567,105"/>
+<area shape="rect" id="node5" href="$classsocketpp_1_1sockbuf.html#a69040cd2827c318ab85e409c75d388b5" title="socketpp::sockbuf::\loverflow" alt="" coords="616,38,752,79"/>
+<area shape="rect" id="node8" href="$classsocketpp_1_1sockbuf.html#a13ab0a926330d008ffaabbe5752ce1a4" title="socketpp::sockbuf::\lpubsync" alt="" coords="616,103,752,145"/>
+<area shape="rect" id="node6" href="$classsocketpp_1_1sockbuf.html#aa078bc083688f5b59f765f4a4908f692" title="socketpp::sockbuf::\l~sockbuf" alt="" coords="800,5,936,46"/>
+<area shape="rect" id="node7" href="$classsocketpp_1_1sockbuf.html#aa96abf204b6eb6335ce712cd1adcec99" title="socketpp::sockbuf::\lxsputn" alt="" coords="800,70,936,111"/>
+</map>

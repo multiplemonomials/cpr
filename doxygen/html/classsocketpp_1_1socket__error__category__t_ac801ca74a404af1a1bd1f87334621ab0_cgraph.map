@@ -1,0 +1,9 @@
+<map id="socketpp::socket_error_category_t::equivalent" name="socketpp::socket_error_category_t::equivalent">
+<area shape="rect" id="node2" href="$classsocketpp_1_1socket__error__category__t.html#ab353a63d972cf2a5e5fbb2230ad64ed1" title="socketpp::socket_error\l_category_t::default_error\l_condition" alt="" coords="209,117,378,173"/>
+<area shape="rect" id="node3" href="$namespacesocketpp.html#a5f2069f21b8bcf82c022e9c6ccbee252" title="socketpp::sockerr_benign" alt="" coords="427,5,597,32"/>
+<area shape="rect" id="node4" href="$namespacesocketpp.html#a67d11f128ce3104d84d08be8eb899b10" title="socketpp::sockerr_addr" alt="" coords="433,56,591,83"/>
+<area shape="rect" id="node5" href="$namespacesocketpp.html#a21f047297067eab8b9673fe683f9e80b" title="socketpp::sockerr_conn" alt="" coords="431,107,593,133"/>
+<area shape="rect" id="node6" href="$namespacesocketpp.html#af8aa4c30a4d0bb59f2edcf1da0ddf2be" title="socketpp::sockerr_op" alt="" coords="439,157,585,184"/>
+<area shape="rect" id="node7" href="$namespacesocketpp.html#a6ec30bef071ae0747e583444d6d79351" title="socketpp::sockerr_arg" alt="" coords="437,208,587,235"/>
+<area shape="rect" id="node8" href="$namespacesocketpp.html#add50049a01cc14669cfdf932c7447177" title="socketpp::sockerr_io" alt="" coords="441,259,583,285"/>
+</map>

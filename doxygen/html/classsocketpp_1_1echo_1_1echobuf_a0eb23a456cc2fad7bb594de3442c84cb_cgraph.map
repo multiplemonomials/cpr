@@ -1,0 +1,8 @@
+<map id="socketpp::echo::echobuf::serve_clients" name="socketpp::echo::echobuf::serve_clients">
+<area shape="rect" id="node2" href="$classsocketpp_1_1_fork.html#a14f3e8690fa233277bcfb7c8e3e30f57" title="socketpp::Fork::is\l_child" alt="" coords="237,11,363,53"/>
+<area shape="rect" id="node3" href="$classsocketpp_1_1sockbuf.html#a241bf8dddceda64a8ab3a959aa0dbe8c" title="socketpp::sockbuf::read" alt="" coords="219,77,381,104"/>
+<area shape="rect" id="node6" href="$classsocketpp_1_1sockbuf.html#a0298714f5ca2c741b76469e9d233a31b" title="socketpp::sockbuf::\lwrite" alt="" coords="232,131,368,173"/>
+<area shape="rect" id="node4" href="$classsocketpp_1_1sockbuf.html#a9bf70c96791a3f73128dcddd951b4130" title="socketpp::sockbuf::\lis_readready" alt="" coords="429,5,565,46"/>
+<area shape="rect" id="node5" href="$classsocketpp_1_1sockbuf.html#a40cd7af62df599b3931f78a5663e8973" title="socketpp::sockbuf::\latmark" alt="" coords="429,70,565,111"/>
+<area shape="rect" id="node7" href="$classsocketpp_1_1sockbuf.html#a610f1725dd0fadc48b19b6cd89ea79b7" title="socketpp::sockbuf::\lis_writeready" alt="" coords="429,135,565,177"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="socketpp::sockbuf::xsgetn" name="socketpp::sockbuf::xsgetn">
+<area shape="rect" id="node2" href="$classsocketpp_1_1sockbuf.html#a24689060c9402bb5ca8916efa91005d7" title="return the number of chars in the input sequence " alt="" coords="189,5,325,46"/>
+<area shape="rect" id="node3" href="$classsocketpp_1_1sockbuf.html#af2f07774d898241ad2db5868a31899b6" title="socketpp::sockbuf::\lunderflow" alt="" coords="189,70,325,111"/>
+<area shape="rect" id="node4" href="$classsocketpp_1_1sockbuf.html#a241bf8dddceda64a8ab3a959aa0dbe8c" title="socketpp::sockbuf::read" alt="" coords="374,77,535,104"/>
+<area shape="rect" id="node5" href="$classsocketpp_1_1sockbuf.html#a9bf70c96791a3f73128dcddd951b4130" title="socketpp::sockbuf::\lis_readready" alt="" coords="584,37,720,78"/>
+<area shape="rect" id="node6" href="$classsocketpp_1_1sockbuf.html#a40cd7af62df599b3931f78a5663e8973" title="socketpp::sockbuf::\latmark" alt="" coords="584,102,720,143"/>
+</map>

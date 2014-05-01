@@ -1,0 +1,8 @@
+<map id="cpr::cpr_error_category_t::default_error_condition" name="cpr::cpr_error_category_t::default_error_condition">
+<area shape="rect" id="node2" href="$namespacecpr.html#a62fff77f58240786e0118e66a2ee7681" title="cpr::sockerr_benign" alt="" coords="224,5,360,32"/>
+<area shape="rect" id="node3" href="$namespacecpr.html#abf39b46670295f62528442a686b5d975" title="cpr::sockerr_addr" alt="" coords="231,56,353,83"/>
+<area shape="rect" id="node4" href="$namespacecpr.html#a600a905b3f46e4ccb84e13d4e81ffd48" title="cpr::sockerr_conn" alt="" coords="229,107,355,133"/>
+<area shape="rect" id="node5" href="$namespacecpr.html#a4edc53eab090888f42f4c6e48099979f" title="cpr::sockerr_op" alt="" coords="236,157,348,184"/>
+<area shape="rect" id="node6" href="$namespacecpr.html#a7ae62011215c5b583f24c84a4cb995d3" title="cpr::sockerr_arg" alt="" coords="234,208,350,235"/>
+<area shape="rect" id="node7" href="$namespacecpr.html#a66bcc6e38de3c6853d88b3a57c5c8b8b" title="cpr::sockerr_io" alt="" coords="238,259,346,285"/>
+</map>

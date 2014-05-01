@@ -1,0 +1,8 @@
+add_executable(TestSocketInetDatagram TestSocketInetDatagram.cpp)
+add_executable(TestSocketInetStream TestSocketInetStream.cpp)
+
+target_link_libraries(TestSocketInetDatagram socket++ cprbase)
+target_link_libraries(TestSocketInetStream socket++ cprbase)
+
+add_test(TestSocketInetDatagram TestSocketInetDatagram)
+add_test(TestSocketInetStream TestSocketInetStream)

@@ -1,0 +1,7 @@
+<map id="socketpp::sockinetaddr::family" name="socketpp::sockinetaddr::family">
+<area shape="rect" id="node2" href="$classsocketpp_1_1sockinetaddr.html#a971eff70161181dec0692d001c8586e3" title="socketpp::sockinetaddr\l::gethostname" alt="" coords="211,50,368,91"/>
+<area shape="rect" id="node3" href="$classsocketpp_1_1sockinetbuf.html#a6b758b03262cf53d86093bbc703f424d" title="socketpp::sockinetbuf\l::localhost" alt="" coords="416,5,565,46"/>
+<area shape="rect" id="node4" href="$classsocketpp_1_1sockinetbuf.html#a94ee6647214ee859aea89362a268e012" title="socketpp::sockinetbuf\l::peerhost" alt="" coords="416,83,565,125"/>
+<area shape="rect" id="node5" href="$classsocketpp_1_1sockinetbuf.html#a902b3c27198ab45cf8d58d18ae5438cf" title="socketpp::sockinetbuf\l::localport" alt="" coords="215,167,364,209"/>
+<area shape="rect" id="node6" href="$classsocketpp_1_1sockinetbuf.html#a5a37c4b3cb54d3c9f106aeb7f404885e" title="socketpp::sockinetbuf\l::peerport" alt="" coords="215,233,364,274"/>
+</map>
