@@ -63,34 +63,14 @@ public:
   /**
   * Construct from OS error, where it happened, and possibly what happened
   * 
-  * e.g. cprerr(EINVAL, "bind", "socket in wrong state)
+  * e.g. cprerr(EINVAL, "bind", "socket in wrong state")
+  * what() would print "Invalid argument from bind (socket in wrong state)"
   */
-  exception(int e, const char *operation = NULL, const char *specification = NULL)
-  : err(e, cpr_error_category_t::cpr_error_category) 
-  {
-		if (operation != NULL)
-			text = operation;
-		
-		if (specification != NULL) 
-		{
-			text += "(";
-			text += specification;
-			text += ")";
-		}
-  }
-  
-  exception(int e, const std::string &operation)
-  : err (e, cpr_error_category_t::cpr_error_category),
-	text(operation)
-  {
-  }
+  exception(int e, const char *operation = nullptr, const char *specification = nullptr);
   
   exception(const exception &) = default;
   
-  virtual const char* what() const noexcept
-  {
-		return (err.message() + " from " + text).c_str(); 
-  }
+  virtual const char* what() const noexcept;
 	
   const char* operation() const 
   { 

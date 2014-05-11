@@ -327,15 +327,25 @@ int sockbuf::read (void* buf, int len)
 
 /**
 * Accept an incoming connection on this socket (note that the acceptor socket must be in listening mode)
-*
-* Template argument is the type of socket you want to construct, e.g. somesock.accept<socketpp::isockinet>()
 */
 sockbuf::sockdesc sockbuf::accept()
 {
   int soc = -1;
   
-  if ((soc = ::accept(rep->sock, nullptr, nullptr)) == -1)
-	throw cpr::exception (errno, "sockbuf::sockdesc", sockname.c_str());
+  soc = ::accept(rep->sock, nullptr, nullptr);
+  
+  if(soc == -1)
+  {
+		if(errno == EINVAL)
+		{
+			throw cpr::exception(errno, "sockbuf::accept", "did you forget to call listen()?");
+		}
+		
+		else
+		{
+			throw cpr::exception(errno, "sockbuf::accept", sockname.c_str());
+		}
+	}
 	
   return sockdesc(soc);
 }

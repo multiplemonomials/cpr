@@ -15,4 +15,4 @@ install (FILES
 	cprerr.h
 	DESTINATION ${header_destination}/base)
 	
-#add_subdirectory(test)
+add_subdirectory(test)

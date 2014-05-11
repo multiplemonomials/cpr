@@ -185,6 +185,7 @@ sockinetaddr sockinetbuf::peeraddr() const
   return sin;
 }
 
+///return the port of the remote, in host byte order
 int sockinetbuf::peerport() const
 {
   sockinetaddr sin = peeraddr();

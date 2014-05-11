@@ -28,7 +28,7 @@ namespace detail
 socketpp::sockbuf* createpipestream(const char* cmd, int mode);
 }
 
-class iopipestream: public socketpp::sockbuf, public virtual std::iostream
+class iopipestream: public socketpp::sockbuf, public std::iostream
 {
 public:
     iopipestream(const char* cmd);
@@ -38,7 +38,7 @@ public:
     }
 };
 
-class ipipestream: public socketpp::sockbuf, public virtual std::istream
+class ipipestream: public socketpp::sockbuf, public std::istream
 {
 public:
     ipipestream(const char* cmd);
@@ -48,7 +48,7 @@ public:
     }
 };
 
-class opipestream: public socketpp::sockbuf, public virtual std::ostream
+class opipestream: public socketpp::sockbuf, public std::ostream
 {
 public:
     opipestream(const char* cmd);

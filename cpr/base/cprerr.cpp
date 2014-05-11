@@ -7,6 +7,28 @@
 namespace cpr
 {
 
+exception::exception(int e, const char *operation, const char *specification)
+: err(e, cpr_error_category_t::cpr_error_category) 
+{
+	if(operation != nullptr)
+	{
+		text += " from ";
+		text += operation;
+	}
+	
+	if (specification != nullptr) 
+	{
+		text += " (";
+		text += specification;
+		text += ")";
+	}
+}
+
+const char* exception::what() const noexcept
+{
+	return (text == "" ? err.message() : err.message() + text).c_str(); 
+}
+
 //statically initialized class variable
 cpr_error_category_t cpr_error_category_t::cpr_error_category;
 
