@@ -207,7 +207,6 @@ public:
 
   int                   sd () const { return rep->sock; }
   int                   pubsync () { return sync (); }
-  virtual bool          is_open () const;
     
   virtual void		bind	(sockAddr&);
   virtual void		connect	(sockAddr&);

@@ -147,13 +147,6 @@ sockbuf::~sockbuf ()
   }
 }
 
-/** if socket is still connected to the peer, return true
-* else return false */
-bool sockbuf::is_open () const
-{
-  return false;
-}
-
 int sockbuf::sync ()
 // we never return -1 because we throw cpr::exception
 // exception in the event of an error.
@@ -298,7 +291,7 @@ void sockbuf::bind (sockAddr& sa)
     throw cpr::exception (errno, "sockbuf::bind", sockname.c_str());
 }
 
-void sockbuf::connect (sockAddr& sa)
+void sockbuf::connect(sockAddr& sa)
 {
   if (::connect(rep->sock, sa.addr (), sa.size()) == -1)
     throw cpr::exception (errno, "sockbuf::connect", sockname.c_str());
