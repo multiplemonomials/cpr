@@ -15,7 +15,7 @@ using namespace std;
 #include <Config.h>
 
 #include <socket++/echo.h>
-#include <socket++/fork.h>
+#include <base/fork.h>
 #include <stdlib.h>
 
 namespace socketpp

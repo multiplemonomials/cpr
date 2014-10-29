@@ -1,7 +1,7 @@
 
 /** Test ability of datagram inet sockets to send and recieve data */
 
-#include <cpr/base/cprerr.h>
+#include "../cprerr.h"
 
 #include <iostream>
 #include <thread>

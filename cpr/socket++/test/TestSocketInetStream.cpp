@@ -1,7 +1,8 @@
 
 /** Test ability of datagram inet sockets to send and recieve data */
 
-#include <cpr/socket++/sockinet.h>
+#include "../sockinet.h"
+#include "../../base/cprerr.h"
 
 #include <iostream>
 #include <thread>
@@ -55,7 +56,7 @@ int main()
 		std::cerr << "ERROR: Recieved \"" << reception << "\", expected \"" << transmission << "\"" << std::endl;
 		return 1;
 	}
-	catch(socketpp::sockerr & error)
+	catch(cpr::exception & error)
 	{
 		std::cerr << "Caught sockerr: " << error.what() << std::endl;
 		return 1;
