@@ -1,0 +1,15 @@
+set(TEST_LINK_LIBS socket++)
+if(USE_WINSOCK)
+	set(TEST_LINK_LIBS "${TEST_LINK_LIBS};Wininet;Ws2_32")
+endif(USE_WINSOCK)
+add_executable(TestSocketInetDatagram TestSocketInetDatagram.cpp)
+add_executable(TestSocketInetStream TestSocketInetStream.cpp)
+add_executable(TestSocketError TestSocketError.cpp)
+
+target_link_libraries(TestSocketInetDatagram ${TEST_LINK_LIBS})
+target_link_libraries(TestSocketInetStream ${TEST_LINK_LIBS})
+target_link_libraries(TestSocketError ${TEST_LINK_LIBS})
+
+add_test(TestSocketError TestSocketError)
+add_test(TestSocketInetDatagram TestSocketInetDatagram)
+add_test(TestSocketInetStream TestSocketInetStream)

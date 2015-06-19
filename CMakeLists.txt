@@ -1,11 +1,11 @@
-cmake_minimum_required (VERSION 2.6)
+cmake_minimum_required (VERSION 2.8.4)
 
 #hush, annoying warnings
 if(POLICY CMP0017)
  cmake_policy(SET CMP0017 NEW)
 endif(POLICY CMP0017)
 
-project (CPR)
+project(SOCKET++)
 
 enable_testing()
 
@@ -14,19 +14,31 @@ include (${CMAKE_ROOT}/Modules/CheckIncludeFileCXX.cmake)
 include (${CMAKE_ROOT}/Modules/CheckIncludeFile.cmake)
 
 # The version number.
-set (CPR_VERSION_MAJOR 1)
-set (CPR_VERSION_MINOR 0)
+set(SOCKET++_VERSION_MAJOR 2)
+set(SOCKET++_VERSION_MINOR 0)
 
 #leaving this in for now while code is in development
 #enables debug flags
 SET(CMAKE_BUILD_TYPE relwithdebinfo)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_C_FLAGS} --std=gnu++11 -Wall -pthread")
+set(CMAKE_CXX_FLAGS "${CMAKE_C_FLAGS} --std=c++11 -Wall -pthread -Wno-unknown-pragmas -iquote ${PROJECT_SOURCE_DIR}/socket++")
 
-set(CMAKE_CXX_FLAGS_RELWITHDEBINFO "${CMAKE_CXX_FLAGS_RELWITHDEBINFO} --std=gnu++11 -Wall -g -pthread")
+set(CMAKE_CXX_FLAGS_RELWITHDEBINFO "${CMAKE_CXX_FLAGS_RELWITHDEBINFO} -g")
+
+option(USE_EXTERN_C "Wrap C include files in extern C blocks.  Most system headers already have these blocks, but try it if you get link errors.")
+option(USE_WINSOCK "Use the Windows WSA socket library as opposed to the UNIX one." ${WIN32})
+
+
+if(USE_EXTERN_C)
+	set(EXTERN_C_BEGIN "extern \"C\" {")
+	set(EXTERN_C_END "}")
+endif(USE_EXTERN_C)
+	
 
 check_include_file_cxx(sstream HAVE_SSTREAM)
 check_include_file_cxx("string" HAVE_STRING)
+check_include_file_cxx("memory" HAVE_MEMORY)
+
 
 check_include_file(dflcn.h HAVE_DLFCN_H)
 check_include_file(inttypes.h HAVE_INTTYPES_H)
@@ -61,13 +73,19 @@ endif(DOXYGEN_FOUND)
 # configure a header file to pass some of the CMake settings
 # to the source code
 configure_file (
-  "${PROJECT_SOURCE_DIR}/cpr/Config.h.in"
-  "${PROJECT_SOURCE_DIR}/cpr/Config.h"
+  "${PROJECT_SOURCE_DIR}/socketpp-config.h.in"
+  "${PROJECT_BINARY_DIR}/config/socketpp-config.h"
   )
 
-set(header_destination "include/cpr") 
+include_directories("${PROJECT_SOURCE_DIR}")
+include_directories("${PROJECT_BINARY_DIR}/config")
+	
+#install config header
+install (FILES 
+	${PROJECT_BINARY_DIR}/config/socketpp-config.h
+	DESTINATION ${header_destination}/socket++)
+	
+set(header_destination "include/socket++") 
  
-include_directories("${PROJECT_SOURCE_DIR}/cpr")
-
-add_subdirectory ("cpr")
+add_subdirectory("socket++")
  

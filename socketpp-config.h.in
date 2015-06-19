@@ -1,0 +1,69 @@
+#define SOCKETPP_VERSION_MAJOR ${SOCKET++_VERSION_MAJOR}
+#define SOCKETPP_VERSION_MINOR ${SOCKET++_VERSION_MINOR}
+
+#cmakedefine HAVE_FORK 1
+
+#cmakedefine HAVE_VFORK 1
+
+#cmakedefine HAVE_SYS_SIGLIST 1
+
+#cmakedefine HAVE_SENDMSG 1
+
+#cmakedefine HAVE_SIGACTION 1
+
+#cmakedefine HAVE_SELECT 1
+
+/* Define to 1 if you have the <dlfcn.h> header file. */
+#cmakedefine HAVE_DLFCN_H 1
+
+/* Define to 1 if you have the <inttypes.h> header file. */
+#cmakedefine HAVE_INTTYPES_H 1
+
+/* Define to 1 if you have the <memory.h> header file. */
+#cmakedefine HAVE_MEMORY_H 1
+
+/* Define to 1 if you have the <sstream> header file. */
+#cmakedefine HAVE_SSTREAM 1
+
+/* Define to 1 if you have the <stdint.h> header file. */
+#cmakedefine HAVE_STDINT_H 1
+
+/* Define to 1 if you have the <stdlib.h> header file. */
+#cmakedefine HAVE_STDLIB_H 1
+
+/* Define to 1 if you have the <string> header file. */
+#cmakedefine HAVE_STRING 1
+
+/* Define to 1 if you have the <strings.h> header file. */
+#cmakedefine HAVE_STRINGS_H 1
+
+/* Define to 1 if you have the <string.h> header file. */
+#cmakedefine HAVE_STRING_H 1
+
+/* Define to 1 if you have the <sys/stat.h> header file. */
+#cmakedefine HAVE_SYS_STAT_H 1
+
+/* Define to 1 if you have the <sys/types.h> header file. */
+#cmakedefine HAVE_SYS_TYPES_H 1
+
+/* Define to 1 if you have <sys/wait.h> that is POSIX.1 compatible. */
+#cmakedefine HAVE_SYS_WAIT_H 1
+
+/* Define to 1 if you have the <unistd.h> header file. */
+#cmakedefine HAVE_UNISTD_H 1
+
+#cmakedefine USE_WINSOCK 1
+
+//if there isn't a working vfork, make our own
+#ifndef HAVE_VFORK
+	#ifdef HAVE_FORK
+		#define fork vfork
+	#endif
+#endif
+
+#ifndef HAVE_SYS_SIGLIST
+	#define _sys_siglist sys_siglist
+#endif
+
+#define EXTERN_C_BEGIN ${EXTERN_C_BEGIN}
+#define EXTERN_C_END ${EXTERN_C_END}
