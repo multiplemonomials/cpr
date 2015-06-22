@@ -35,6 +35,7 @@ This header includes all of the headers for the OS's socket library, whichever o
 #	include <netdb.h>
 #	include <sys/param.h>
 # include <fcntl.h>
+#include <sys/wait.h>
 	EXTERN_C_END
 #endif
 
@@ -62,8 +63,9 @@ This header includes all of the headers for the OS's socket library, whichever o
 #endif
 
 #ifndef USE_WINSOCK
-	#	define SOCKET int
-	#	define INVALID_SOCKET -1
+	#define SOCKET int
+	#define INVALID_SOCKET -1
+	#define SOCKET_ERROR -1
 #endif
 
 #if defined(__APPLE) || defined(USE_WINSOCK)

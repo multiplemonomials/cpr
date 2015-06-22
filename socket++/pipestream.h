@@ -11,8 +11,8 @@
 #ifndef _PIPESTREAM_H
 #define	_PIPESTREAM_H
 
-#include "socket++/sockstream.h"
-#include "socket++/sockunix.h"
+#include "sockstream.h"
+#include "sockunix.h"
 
 namespace socketpp
 {

@@ -20,8 +20,7 @@
 
 #ifndef USE_WINSOCK
 
-#include <base/socketerr.h>
-#include <base/pipestream.h>
+#include "pipestream.h"
 
 namespace socketpp
 {
@@ -31,12 +30,12 @@ namespace socketpp
 
 enum domain { af_unix = 1 };
 
-///Returns a pair of linked Unix sockets.vc
+///Returns a pair of linked Unix sockets.
 std::pair<iosockunix, iosockunix> make_socketpair()
 {
 	int sockets[2];
   if (::socketpair(af_unix, sockbuf::sock_stream, 0, sockets) == -1)
-    throw err(errno, "cpr::make_socketpair", "while invoking socketpair");
+    throw err(errno, "socketpp::make_socketpair", "while invoking socketpair");
    
   return std::pair<iosockunix, iosockunix>(iosockunix(sockbuf::sockdesc(sockets[0])),
   	iosockunix(sockbuf::sockdesc(sockets[1])));
@@ -46,10 +45,10 @@ sockbuf* detail::createpipestream(const char* cmd, int mode)
 {
   int sockets[2];
   if (::socketpair(af_unix, sockbuf::sock_stream, 0, sockets) == -1)
-    throw err(errno, "cpr::pipestream()", "while invoking socketpair");
+    throw err(errno, "socketpp::pipestream()", "while invoking socketpair");
   
   pid_t pid = ::fork();
-  if (pid == -1) throw err(errno, "cpr::pipestream()", "while invoking fork");
+  if (pid == -1) throw err(errno, "socketpp::pipestream()", "while invoking fork");
   
   if (pid == 0) {
     // child process

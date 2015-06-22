@@ -9,25 +9,17 @@
 // Version: 12Jan97 1.11
 
 //don't compile on systems without fork
+
+
+#include "ossock.h"
 #ifdef HAVE_FORK
 
-#include <Config.h>
+#include "fork.h"
 
 #include <iostream>
-#include <stdio.h> // perror in solaris2.3 is declared here
-#include <stdlib.h>
-#include <unistd.h>
-#include <errno.h>
-#include <signal.h>
-#include <sys/wait.h>
-
-#include <socket++/fork.h>
 
 namespace socketpp
 {
-
-using std::cerr;
-using std::endl;
 
 Fork::ForkProcess* Fork::ForkProcess::list = 0;
 Fork::KillForks Fork::killall;
@@ -54,7 +46,7 @@ Fork::ForkProcess::ForkProcess (bool kill, bool give_reason)
 {
   if (list == 0) {
     struct sigaction sa;
-    sa.sa_handler = (void(*)(int)) sighnd (&Fork::ForkProcess::reaper_nohang);
+    sa.sa_handler = (&Fork::ForkProcess::reaper_nohang);
     sigemptyset (&sa.sa_mask);
     sa.sa_flags = SA_RESTART;
     sigaction (SIGCHLD, &sa, 0);
@@ -78,7 +70,7 @@ Fork::ForkProcess::ForkProcess (bool kill, bool give_reason)
 
     if (kill_child) {
       struct sigaction sa;
-      sa.sa_handler = (void(*)(int)) sighnd (&Fork::ForkProcess::commit_suicide);
+      sa.sa_handler = (&Fork::ForkProcess::commit_suicide);
       sigemptyset (&sa.sa_mask);
       sa.sa_flags = SA_RESTART;
       sigaction (SIGTERM, &sa, 0);
@@ -127,14 +119,14 @@ void Fork::ForkProcess::infanticide_reason (pid_t pid, int status)
     return;
 
   if (WIFSTOPPED (status))
-    cerr << "process " << pid << " gets "
-      << sys_siglist [WSTOPSIG (status)] << endl;
+    std::cerr << "process " << pid << " gets "
+      << sys_siglist [WSTOPSIG (status)] << std::endl;
   else if (WIFEXITED (status))
-    cerr << "process " << pid << " exited with status "
-      << WEXITSTATUS (status) << endl;
+    std::cerr << "process " << pid << " exited with status "
+      << WEXITSTATUS (status) << std::endl;
   else if (WIFSIGNALED (status))
-    cerr << "process " << pid << " got "
-      << sys_siglist [WTERMSIG (status)] << endl;
+    std::cerr << "process " << pid << " got "
+      << sys_siglist [WTERMSIG (status)] << std::endl;
 }
 
 void Fork::ForkProcess::reaper_nohang (int signo)
@@ -187,7 +179,7 @@ void Fork::suicide_signal (int signo)
      // commit suicide at the signal signo
 {
   struct sigaction sa;
-  sa.sa_handler = (void(*)(int)) sighnd (&Fork::ForkProcess::commit_suicide);
+  sa.sa_handler = (&Fork::ForkProcess::commit_suicide);
   sigemptyset (&sa.sa_mask);
   sa.sa_flags = 0;
   if (sigaction (signo, &sa, 0) == -1)

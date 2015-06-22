@@ -11,15 +11,11 @@
 #ifndef FORK_H
 #define FORK_H
 
-#include <Config.h>
+#include "ossock.h"
 
 #ifndef HAVE_FORK
 #error The Fork header has been included but this platform lacks fork.
 #endif
-
-#include <unistd.h>
-#include <sys/types.h>
-#include <sys/signal.h>
 
 namespace socketpp
 {
@@ -59,8 +55,8 @@ class Fork {
 
   ForkProcess* process;
 
-  Fork (Fork&);             // no copy constructor definition provided
-  Fork& operator = (Fork&); // no assignment operator definition provided
+  Fork (Fork&) = delete;             // no copy constructor definition provided
+  Fork& operator = (Fork&) = delete; // no assignment operator definition provided
 
  public:
   Fork (bool kill = 0, bool reason = 0)

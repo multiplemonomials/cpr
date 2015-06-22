@@ -129,7 +129,7 @@ sockbuf::~sockbuf ()
     delete [] pbase ();
     delete [] eback ();
 #ifndef WIN32
-    int c = close (rep->sock);
+    	int c = close (rep->sock);
 #else
 		int c = closesocket(rep->sock);
 #endif

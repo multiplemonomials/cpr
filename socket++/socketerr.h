@@ -67,6 +67,10 @@ public:
 	  {
 		  return std::string(strerror(ev));
 	  }
+	  
+	  //should never get here.
+	  //This is only here to stop te compiler warning when USE_WINSOCK is not defined.
+	  return "Error determining the error code type.";
   }
 
   virtual ~socket_error_category_t(){}
