@@ -90,7 +90,5 @@ typedef int socklen_t;
 #define USE_POSIX_ONLY_ERRORS  //enable error codes specific to linux
 #endif
 
-// environ is not given a declaration in sun's <unistd.h>
-extern char** environ;
 
 #endif // OSSOCK_H

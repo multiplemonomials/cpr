@@ -667,7 +667,7 @@ bool sockbuf::oob (bool b)
 
 sockbuf::socklinger sockbuf::linger () const
 {
-  socklinger old (0, 0);
+  sockbuf::socklinger old (0, 0);
   getopt (so_linger, &old, sizeof (old));
   return old;
 }

@@ -125,7 +125,7 @@ public:
   isockinet (const sockbuf::sockdesc& sd);
 	isockinet (const sockinetbuf& sb);
   isockinet (sockbuf::type ty=sockbuf::sock_stream, int proto=0);
-  ~isockinet ();      
+  virtual ~isockinet ();
 };
 
 class osockinet: public sockinet_base, public osockstream

@@ -8,52 +8,76 @@
 //
 // Version: 12Jan97 1.11
 
-#ifndef _PIPESTREAM_H
-#define	_PIPESTREAM_H
+#ifndef _pipestream_H
+#define	_pipestream_H
 
-#include "sockstream.h"
-#include "sockunix.h"
+#include "filelikebuf.h"
+
+#include <memory>
 
 namespace socketpp
 {
 
-std::pair<iosockunix, iosockunix> make_socketpair();
-
-namespace detail
+//extended buffer class for inet sockets
+class pipestreambuf : public filelikebuf
 {
-sockbuf* createpipestream(const char* cmd, int mode);
+protected:
+	//construct from file handle
+	//only called from createpipe()
+	pipestreambuf(filedesc file);
+
+public:
+
+	//copy constructor
+	pipestreambuf(const pipestreambuf& pbuf): filelikebuf (pbuf) {}
+
+	pipestreambuf& operator=(const pipestreambuf& si);
+	virtual ~pipestreambuf () {}
+
+	bool inherit();
+	bool inherit(bool toSet);
+
+	bool close_on_exec();
+	bool close_on_exec(bool toSet);
+};
+
+class pipestream_base : public virtual filelikestream_base, public pipestreambuf
+{
+protected:
+	pipestream_base(const filelikebuf::filedesc& sd) : pipestreambuf(sd)
+	{
+	
+	}
+	
+public:
+	pipestream_base(const pipestream_base&) = delete;
+	
+};
+
+class ipipestream: public pipestream_base, public ifilestream
+{
+private:
+  ipipestream (const filelikebuf::filedesc& sd);
+public:
+	ipipestream (const ipipestream&) = delete;
+  virtual ~ipipestream ();
+};
+
+class opipestream: public pipestream_base, public ofilestream
+{
+private:
+	opipestream (const filelikebuf::filedesc& sd);
+public:
+	opipestream (const opipestream&) = delete;
+  virtual ~opipestream ();
+};
+
+typedef std::pair<std::shared_ptr<ipipestream>, std::shared_ptr<opipestream>> pipepair;
+
+///creates a "local" pipe which can transfer data within the process or its children.
+pipepair createpipe();
+
 }
 
-class iopipestream: public sockbuf, public std::iostream
-{
-public:
-    iopipestream(const char* cmd);
-    virtual ~iopipestream()
-    {
-    
-    }
-};
 
-class ipipestream: public sockbuf, public std::istream
-{
-public:
-    ipipestream(const char* cmd);
-    virtual ~ipipestream()
-    {
-    
-    }
-};
-
-class opipestream: public sockbuf, public std::ostream
-{
-public:
-    opipestream(const char* cmd);
-    virtual ~opipestream()
-    {
-    
-    }
-};
-
-}
-
-#endif	// _PIPESTREAM_H
+#endif	// _pipestream_H

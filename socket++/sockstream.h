@@ -30,6 +30,7 @@
 #include <string>
 #include <cstdio>
 #include <memory>
+#include <utility>
 
 // socket address classes
 struct sockaddr;
@@ -128,14 +129,8 @@ public:
   { 
   somaxconn	= SOMAXCONN
   };
-  
-  struct socklinger 
-  {
-    int	l_onoff;	// option on/off
-    int	l_linger;	// linger time
 
-    socklinger (int a, int b): l_onoff (a), l_linger (b) {}
-  };
+  typedef std::pair<int, int> socklinger;
 
   typedef char          char_type;
   typedef std::streampos     pos_type;

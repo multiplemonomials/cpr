@@ -7,9 +7,11 @@ add_library(socket++
 	sockstream.cpp
 	sockunix.cpp
 	fork.cpp
-	pipestream.cpp
+	#pipestream.cpp
+	processstream.cpp
 	sig.cpp
-	socketerr.cpp)
+	socketerr.cpp
+	filelikebuf.cpp)
 
 install (TARGETS socket++ DESTINATION lib)
 
@@ -27,6 +29,8 @@ install (FILES
 	sig.h
 	socketerr.h
 	ossock.h
+	filelikebuf.h
+	processtream.h
 	DESTINATION ${header_destination}/socket++)
 	
 add_subdirectory(test)
