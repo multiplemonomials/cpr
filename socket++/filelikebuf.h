@@ -53,7 +53,6 @@ public:
     filecnt(filecnt &) = delete;
   };
 
-
 protected:
   std::shared_ptr<filecnt>		rep;
 
@@ -71,12 +70,13 @@ protected:
   virtual std::streamsize    xsputn (const char_type* s, std::streamsize n);
   virtual int_type      overflow (int_type c = EOF);
 
-public:
 
   ///create from existing OS handle
   ///WARNING: Don't use this constructor to create multiple filelikebuf's from a handle, it will cause the file to be closed multiple times!
   ///Use the copy constructor instead
   filelikebuf(const filedesc& fd);
+
+public:
 
   //assign data of filelikebuf
   filelikebuf(const filelikebuf&);

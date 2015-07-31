@@ -34,9 +34,11 @@ public:
 	pipestreambuf& operator=(const pipestreambuf& si);
 	virtual ~pipestreambuf () {}
 
+	/// controls whether this pipe can be inherited by subprocesses.  Only does anything on Windows.
 	bool inherit();
 	bool inherit(bool toSet);
 
+	/// controls whether the pipe will be auto-closed when the process runs exec().  Only does anything on *nix.
 	bool close_on_exec();
 	bool close_on_exec(bool toSet);
 };

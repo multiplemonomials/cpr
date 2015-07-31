@@ -9,12 +9,6 @@
 // paragraph are  preserved on all copies.  This software is provided "as is"
 // with no express or implied warranty.
 //
-// Version: 12Jan97 1.11
-// 2002-07-28 Version 1.2 (C) Herbert Straub
-//  Eliminating sorry_about_global_temp inititialisation. This don't work
-//  in combination with NewsCache. My idea is: initializing the classes with (0)
-//  and in the second step call std::ios::init (sockbuf *) and std::iosockstream::init ...
-//  The constructors of ipipestream, opipestream and iopipestream are changed.
 
 #include "ossock.h"
 #include "processstream.h"
@@ -55,8 +49,8 @@ pipepair createprocessstream(const char* cmd)
 		throw err(lastError(), "createprocessstream", "while invoking CreateProcess");
 	}
 
-	//for some reason, just pipepair here doesn't work
-	return std::pair<std::shared_ptr<ipipestream>, std::shared_ptr<opipestream>>(stdinpipe.first, stdoutpipe.second);
+	//for some reason, just "pipepair" here doesn't work
+	return pipepair(stdinpipe.first, stdoutpipe.second);
 }
 
 #else
@@ -91,7 +85,7 @@ std::pair<ipipestream, opipestream> createprocessstream(const char* cmdd)
 	}
 
 	// parent process
-	return std::pair<std::shared_ptr<ipipestream>, std::shared_ptr<opipestream>>(stdinpipe.first, stdoutpipe.second);
+	return pipepair(stdinpipe.first, stdoutpipe.second);
 }
 
 #endif

@@ -11,7 +11,8 @@ add_library(socket++
 	processstream.cpp
 	sig.cpp
 	socketerr.cpp
-	filelikebuf.cpp)
+	filelikebuf.cpp
+	pipestream.cpp)
 
 install (TARGETS socket++ DESTINATION lib)
 
@@ -31,6 +32,7 @@ install (FILES
 	ossock.h
 	filelikebuf.h
 	processtream.h
+	pipestream.h
 	DESTINATION ${header_destination}/socket++)
 	
 add_subdirectory(test)
