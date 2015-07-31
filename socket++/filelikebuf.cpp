@@ -56,9 +56,9 @@
 namespace socketpp
 {
 
-filelikebuf::filelikebuf (const filelikebuf::filedesc& fd)
-: rep(std::make_shared<filedesc>),
-sockname("filelikebuf " + std::to_string(fd))
+filelikebuf::filelikebuf (const filelikebuf::filedesc& filedescriptor)
+: rep(std::make_shared<filecnt>(filedescriptor)),
+sockname("filelikebuf " + std::to_string(filedescriptor))
 {
   char_type* gbuf = new char_type [BUFSIZ];
   char_type* pbuf = new char_type [BUFSIZ];
@@ -68,7 +68,7 @@ sockname("filelikebuf " + std::to_string(fd))
 
 filelikebuf::filelikebuf (const filelikebuf& sb)
 :rep (sb.rep),
-sockname("filelikebuf " + std::to_string(fd))
+sockname("filelikebuf " + std::to_string(sb.fd()))
 {
   // the streambuf::streambuf (const streambuf&) is assumed
   // to have handled pbase () and gbase () correctly.
