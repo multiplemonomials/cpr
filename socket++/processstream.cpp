@@ -56,7 +56,7 @@ pipepair createprocessstream(const char* cmd)
 #else
 // child closes s2 and uses s1
 // parent closes s1 and uses s2
-std::pair<ipipestream, opipestream> createprocessstream(const char* cmdd)
+pipepair createprocessstream(const char* cmd)
 {
 	pipepair stdoutpipe = createpipe();
 	pipepair stdinpipe = createpipe();
